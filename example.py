@@ -730,10 +730,6 @@ def register_background_thread(initial_registration=False):
     global search_thread
 
     if initial_registration:
-        if not werkzeug.serving.is_running_from_reloader():
-            debug(
-                'register_background_thread: not running inside Flask so not starting thread')
-            return
         if search_thread:
             debug(
                 'register_background_thread: initial registration requested but thread already running')

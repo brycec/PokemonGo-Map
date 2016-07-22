@@ -903,7 +903,7 @@ def get_map():
     return fullmap
 
 
+register_background_thread(initial_registration=True)
 if __name__ == '__main__':
     args = get_args()
-    register_background_thread(initial_registration=True)
     app.run(debug=True, threaded=True, host=args.host, port=args.port)
